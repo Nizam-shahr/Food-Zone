@@ -61,6 +61,16 @@ body {
   .shoppingCart {
     size: 10px;
   }
+  .registerContainer {
+  padding: 1rem 1rem;
+  width: 250px;
+  height: max-content;
+}
+.register {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
   .inputDiv {
     display: flex;
     align-items: center;
@@ -389,7 +399,16 @@ body {
   height: 1.5rem;
   width: 1.5rem;
 }
-
+.registerContainer {
+  padding: 1rem 2rem;
+  width: 500px;
+  height: max-content;
+}
+.register {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .inputDiv {
   display: flex;
   align-items: center;
@@ -724,22 +743,12 @@ select {
   display: none;
   padding: 0.3rem 1rem;
 }
-.registerContainer {
-  padding: 1rem 2rem;
-  width: 500px;
-  height: max-content;
-}
-.register {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+
 .register input {
   /* margin: 1rem; */
   border-radius: 8px;
   border: #AD4C4C 2px solid;
 }
-
 
 .closeModal {
   position: absolute;
