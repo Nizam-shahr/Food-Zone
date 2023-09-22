@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Kanit', sans-serif;
-  background: #dad6d8;
+ 
 }
 
 @media (max-width : 600px) {
@@ -610,12 +610,12 @@ body {
   justify-content: center;
   flex-direction: column;
   padding-left: 3rem;
+  
 }
 .checkoutForm input {
   margin: 1rem;
   padding: 0.5rem;
   border-radius: 5px;
-  border: #AD4C4C 2px solid;
 }
 .checkoutForm label{
   padding-left: 1rem;
@@ -677,7 +677,7 @@ select {
   left: 0;
   /* width: 100%; */
   box-shadow: 1px 1px 1px #c6b5be;
-  background: #dad6d8;
+  background: #fff;
   margin-bottom: 10rem;
 }
 
@@ -723,6 +723,28 @@ select {
 .signedUp{ 
   display: none;
   padding: 0.3rem 1rem;
+}
+.registerContainer {
+  padding: 1rem 2rem;
+  width: 500px;
+  height: max-content;
+}
+.register {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.register input {
+  /* margin: 1rem; */
+  border-radius: 8px;
+  border: #AD4C4C 2px solid;
+}
+
+
+.closeModal {
+  position: absolute;
+  top:1rem;
+  right:1rem;
 }
 
 .filter {
@@ -867,8 +889,14 @@ align-items: center;
   align-items: center;
   flex-direction: column;
 }
-
-
+select {
+  border: #AD4C4C 2px solid;
+  border-radius: 8px;
+}
+input {
+  border: #AD4C4C 2px solid;
+  border-radius: 8px;
+}
 .verification h1 {
   font-size: 35px;
 }
