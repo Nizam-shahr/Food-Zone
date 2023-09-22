@@ -49,7 +49,7 @@ function Register({ setIsModalOpen, loggedIn, setIsOpen }) {
       formDataCopy.timestamp = serverTimestamp();
 
       await setDoc(doc(db, "users", user.uid), formDataCopy);
-      
+      setIsModalOpen(false
     } catch (error) {
       if (error) {
         setText('Register')
