@@ -44,6 +44,8 @@ function Header() {
   const clickCart = () => {
     if (loggedIn) {
       router.push('/Cart')
+    } else{
+      setIsModalOpen(true)
     }
   
   }
