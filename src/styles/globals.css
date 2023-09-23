@@ -750,11 +750,49 @@ select {
   border: #AD4C4C 2px solid;
 }
 
-.closeModal {
-  position: absolute;
-  top:1rem;
-  right:1rem;
+.registerButton {
+  background: #AD4C4C;
+  color: #fff;
+  border-radius: 10px;
+  border: #AD4C4C  2px solid;
+  box-shadow: 5px 5px 5px 2px #c6b5be
 }
+.registerButton:hover {
+  background: white;
+  color: #AD4C4C;
+}
+.closeModal {
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  background: #AD4C4C;
+  color: #fff;
+  border: #AD4C4C  2px solid;
+  border-radius: 50%;
+  padding: 1px 6px;
+  top:0.5rem;
+  right:1rem;
+  box-shadow: 2px 2px 2px 2px #c6b5be
+}
+.closeModal:hover {
+  border: #AD4C4C  2px solid;
+  background: #fff;
+  color: #AD4C4C;
+}
+.create {
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 8px;
+}
+.create button{
+  color: #AD4C4C;
+}
+.instead {
+  padding: 1rem 0.7rem;
+  display: flex;
+  gap: 8px;
+}
+
 
 .filter {
   color: #A5A5A5;
