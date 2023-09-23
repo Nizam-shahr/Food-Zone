@@ -104,7 +104,7 @@ function Header() {
             </button> }
                  
             <Modal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)} style={modalStyle} >
-                  <SignIn setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} loggedIn={loggedIn}/>
+                  <SignIn setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} loggedIn={loggedIn} handleSignUp= {handleSignUp}/>
                   <div className="create"> Don't have an account ?<button  onClick={handleSignUp} >
                  Create One
             </button></div>
