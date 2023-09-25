@@ -65,7 +65,6 @@ function Header() {
       router.push('/Cart')
     }else {
       setIsModalOpen(true)
-      router.push('/Cart')
     }
   
   }
