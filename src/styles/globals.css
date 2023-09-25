@@ -419,10 +419,11 @@ body {
 .interest {
   display: flex;
   margin: 1rem auto;
-  padding: 0 1.5rem;
+  /* padding: 0 1.5rem; */
   /* padding-bottom: 4rem; */
   justify-content: center;
   flex-direction: row;
+  width: 90vw;
 }
 .headerTitle {
   font-size: 30px;
