@@ -423,7 +423,7 @@ body {
   /* padding-bottom: 4rem; */
   justify-content: center;
   flex-direction: row;
-  width: 90vw;
+  width:100%;
 }
 .headerTitle {
   font-size: 30px;
@@ -464,6 +464,7 @@ body {
   padding: 1rem;
   align-items: center;
   flex-direction: row;
+  width:100%;
 }
 .footerPDiv {
   display: flex;
