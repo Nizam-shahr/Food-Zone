@@ -29,8 +29,27 @@ function Header() {
       bottom: "auto",
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
+      border: '#b14d4d 4px solid',
+      borderRadius:  "16px",
     },
+     
   };
+  const secondModalStyle = {
+    overlay: {
+      backgroundColor: "rgba(0, 0, 0, 0.1)",
+      zIndex:'100',
+    },
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      border: '#b14d4d 4px solid',
+      borderRadius:  "16px",
+    },
+  }
   const handleSignUp  = ()=> {
     setIsOpen(true)
   } 
@@ -44,6 +63,8 @@ function Header() {
   const clickCart = () => {
     if (loggedIn) {
       router.push('/Cart')
+    }else {
+      setIsModalOpen(true)
     }
   
   }
@@ -65,7 +86,6 @@ function Header() {
           </h1>
         </div>
         <div className="navBar">
-          <div>
             <div className="cart"onClick={clickCart} >
               <h2>Cart</h2>
               <AiOutlineShoppingCart className="shoppingCart" />
@@ -75,19 +95,16 @@ function Header() {
                 ""
               )}
             </div>
-          </div>
           <div>  {loggedIn ?  <button onClick={onLogOut}>logout</button> : 
            <button className="SignIn" onClick={() => setIsModalOpen(true)}>
               Sign in
             </button> }
                  
             <Modal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)} style={modalStyle} >
-                  <SignIn setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} loggedIn={loggedIn}/>
-                  <button className="SignIn" onClick={handleSignUp} >
-              Sign Up Instead
-            </button> 
+                  <SignIn setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} loggedIn={loggedIn} handleSignUp={handleSignUp}/>
+                  
                  
-            <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={modalStyle} >
+            <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={secondModalStyle} >
                   <Register setIsOpen={setIsOpen} setIsModalOpen={setIsModalOpen} loggedIn={loggedIn}/>
                   
                   <button  className="closeModal" onClick={()=> setIsOpen(false)} ><span>X</span></button>

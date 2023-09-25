@@ -16,7 +16,7 @@ function CartProduct({id, price, name, image, count, itemAmount}) {
   return (
     <div >
       
-              <div className="checkout" > 
+              <div className="checkout w-full" > 
                   <div className="checkoutItem ">
         <img src={image} className="cartImage"  />
                       <div className="checkoutItemDetails">

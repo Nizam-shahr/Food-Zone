@@ -4,7 +4,7 @@ import Modal from "react-modal";
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import Register from './Register';
 import Spinner from './Spinner';
-function SignIn({ setIsModalOpen, loggedIn}) {
+function SignIn({ setIsModalOpen, loggedIn, handleSignUp}) {
   const [showPassword, setShowPassword] = useState(false)
   const[text, setText] = useState('Sign In')
   const [formData, setFormData] = useState({
@@ -84,7 +84,7 @@ function SignIn({ setIsModalOpen, loggedIn}) {
 
           <label>Password</label>
           <input
-            className="border border-gray-400 w-full h-[40px]"
+            className="border border-gray-400 w-full h-[40px] "
             type="password"
             id='password'
             value={password}
@@ -92,11 +92,14 @@ function SignIn({ setIsModalOpen, loggedIn}) {
           />
 
           <button onClick={handleText}
-            className="bg-blue-800 w-full p-3"
+            className="bg-blue-800 w-full p-3 registerButton"
           >{text}</button>
         </form>
       </div>
-    
+      <div className="create"> Don't have an account ?<button  onClick={handleSignUp} >
+                 Create One
+            </button></div>
+                   
     </div>
  
   )

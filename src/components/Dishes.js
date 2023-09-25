@@ -18,7 +18,7 @@ function Dishes({ dish: { price, name, id, image } }) {
   const product = items.find((item) => item.id === id);
   return (
 <div className="kfcCard">
-      <div className="kfcCardItem">
+      <div className="kfcCardItem ">
         <Image src={image} width={250} height={250} className="kfcImage" />
         <div className="kfcPrice">
           <h2>{name}</h2>

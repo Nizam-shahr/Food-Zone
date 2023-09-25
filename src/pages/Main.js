@@ -54,7 +54,7 @@ console.log(selected);
              </select>
          </form>
        </div>
-       <section >
+       <section className='w-full'>
        <h2 className='interestTitle'> Pick an interest</h2>
        <div className='interest'>
         

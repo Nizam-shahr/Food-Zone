@@ -49,11 +49,11 @@ function Register({ setIsModalOpen, loggedIn, setIsOpen }) {
       formDataCopy.timestamp = serverTimestamp();
 
       await setDoc(doc(db, "users", user.uid), formDataCopy);
-      
+      setIsModalOpen(false)
     } catch (error) {
       if (error) {
         setText('Register')
-        setInsteadText('sign up instead')
+        setInsteadText('Already have an account? Sign In')
       }
       toast.error("Something went wrong with registration or user already exist");
     }
@@ -69,6 +69,7 @@ function Register({ setIsModalOpen, loggedIn, setIsOpen }) {
   }
   return (
     <div className="registerContainer">
+      
       <div className="flex flex-col">
         <form onSubmit={onSubmit} className="register">
           <label>Name</label>
@@ -91,17 +92,19 @@ function Register({ setIsModalOpen, loggedIn, setIsOpen }) {
 
           <label>Password</label>
           <input
-            className="border border-gray-400 w-full h-[40px]"
+            className="border border-gray-400 w-full h-[40px] "
             type="password"
             id="password"
             value={password}
             onChange={onChange}
           />
 
-          <button onClick={handleText} className="bg-blue-800 w-full p-3">{text} </button>
+          <button onClick={handleText} className="bg-blue-800 w-full p-3 registerButton">{text} </button>
         </form>
-        <button onClick={()=>  setIsOpen(false)}>{insteadText}</button>
       </div>
+      <div className="instead">
+        <button onClick={()=>  setIsOpen(false)}>{insteadText}</button>
+           </div>
     </div>
   );
 }
