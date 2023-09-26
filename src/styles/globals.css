@@ -73,7 +73,7 @@ body {
     justify-content: center;
     margin: 0 auto;
     padding: 1.5rem 0;
-    width: 100vw;
+    width: 100%;
   }
   .interest {
     display: flex;
@@ -409,16 +409,16 @@ body {
   width: 100%;
 }
 
-select {
-  width: 100%;
-}
-
 .interest {
   display: flex;
-  margin: 1rem auto;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 1rem;
+  padding: 1rem 0;
+  margin: auto;
   justify-content: center;
   flex-direction: row;
-  width: 100%;
+  width:90vw ;
 }
 .headerTitle {
   font-size: 30px;
@@ -428,7 +428,7 @@ select {
   padding: 0.5rem 0;
 }
 .interestTitle {
-  padding: 0 8rem;
+  padding: 0 5rem;
 }
 .interestImage {
   width: 50px;
@@ -439,12 +439,16 @@ select {
   text-align: left;
 }
 .card {
+  display: flex;
+  /* max-width: 365px; */
+  flex-direction: column;
+  flex-grow: 1;
   border: #dad6d8 1px solid;
-  margin: 0 1rem;
-  padding: 1rem;
+  padding: 2rem;
   background: #fff;
   outline: none;
 }
+
 .borderLine {
   width: 90vw;
   display:flex;
@@ -453,13 +457,15 @@ select {
   margin: 4rem auto;
 }
 .serveContainer {
+ 
+}
+.serveContainerDiv {
   display: flex;
-  margin: 0 auto;
   justify-content: center;
-  gap: 1rem;
-  width: 100%;
   align-items: center;
   flex-direction: row;
+  gap: 5rem;
+  width: 100%;
 }
 .footerPDiv {
   display: flex;
@@ -473,6 +479,7 @@ select {
   margin: 0 auto;
   justify-content: center;
   flex-direction: row;
+  flex-grow: 1;
   gap: 1rem;
   width: 90vw;
   padding: 1rem ;
@@ -568,7 +575,7 @@ select {
 }
 .checkoutHomeandVendors{
   display: flex;
-  padding: 3rem;
+  padding: 0 2rem;
   margin: 0 2rem;
 }
 .checkoutHomeandVendors h2 {
@@ -576,15 +583,14 @@ select {
 }
 .cartName {
   font-size: 35px;
-  padding: 3rem 11rem;
+  padding: 1rem 11rem;
 }
 .cartNames{
   font-size: 35px;
-  padding: 3rem 4rem;
+  padding: 1rem 4rem;
 }
 .homeAndVendors h2 {
   padding: 0 0.3rem;
-
 }
 .emptyCart img {
   width: 250px;
@@ -594,7 +600,7 @@ select {
   color:#AD4C4C;
 }
 .cartContainer {
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 .noItem {
   padding-right: 1rem;
@@ -650,7 +656,7 @@ select {
   margin: 0 auto;
    /* border: #AD4C4C solid 2px; */
    display: flex;
-   width: 80vw;
+   width: 88vw;
    /* margin-right: 10rem; */
    /* justify-content: center; */
    padding: 1rem ;
@@ -683,9 +689,16 @@ select {
     align-items: center;
     flex-direction: column;
 }
+ 
+
 
 }
 
+@media (min-width: 840px )  and (max-width: 980px){
+  .card{
+    max-width: 365px;
+  }
+} 
 .container {
   position: fixed;
   z-index: 1;
@@ -701,7 +714,6 @@ select {
   color: #AD4C4C;
   margin: 0 ;
 }
-
 
 .container{
   max-width: 100vw;
@@ -814,9 +826,13 @@ select {
   text-align: left;
 }
 
+.cardHover:hover{
+  box-shadow: 2px 2px 2px #dad7d9;
+}
+
 .serve {
   border: none;
-  margin: 0 3rem;
+  /* margin: 0 3rem; */
 }
 .footerPDiv p {
   padding: 1rem;
@@ -872,6 +888,9 @@ padding-left: 4rem;
 }
 
 .kfcCardItem {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   border: #c6b5be solid 0.2px;
   padding: 0.5rem;
   border-radius: 8px;
