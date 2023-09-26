@@ -443,7 +443,7 @@ body {
   flex-direction: column;
   flex-grow: 1;
   border: #dad6d8 1px solid;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background: #fff;
   outline: none;
 }
