@@ -412,7 +412,6 @@ body {
 .interest {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
   gap: 1rem;
   padding: 1rem 0;
   margin: auto;
@@ -444,7 +443,7 @@ body {
   flex-direction: column;
   flex-grow: 1;
   border: #dad6d8 1px solid;
-  padding: 2rem;
+  padding: 1rem;
   background: #fff;
   outline: none;
 }
