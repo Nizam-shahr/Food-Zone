@@ -59,24 +59,24 @@ console.log(selected);
        <div className='interest'>
         
         <button onClick={()=>router.push('/Vendors')} disabled = {selected === '0' ? isDiabled : !isDiabled} className= {selected =='0' ? 'card filter grayscale' :'card filter grayscale-0' }>
-       <img src='./images/fastFoodC.svg'  className='interestImage' alt='' />
+       <Image width={50} height={50} src='./images/fastFoodC.svg'  className='interestImage' alt='' />
          <h2 className= 'Nofilter' >Fast Food</h2>
          <p className='NofilterP'   >All sorrows are less with bread.</p>
         </button>
         <button onClick={() => router.push('/Vendors')} disabled = {selected === '0' ? isDiabled : !isDiabled} className= {selected =='0' ? 'card filter grayscale' :'card filter grayscale-0 cardHover' } >
-        <img  src='./images/forkC.svg'  className='interestImage' alt='' />
+        <Image width={50} height={50}  src='./images/forkC.svg'  className='interestImage' alt='' />
         <h2 className='Nofilter' >Resturant</h2>
         <p className= 'NofilterP'>May not want it, but good for you.</p>
         </button>
        
         <button onClick={() => router.push('/Vendors')} disabled = {selected === '0' ? isDiabled : !isDiabled} className= {selected =='0' ? 'card filter grayscale ' :'card filter grayscale-0 cardHover' } >
-        <img  src='./images/mai-thaiC.svg'   className='interestImage'  alt='' />
+        <Image width={50} height={50}  src='./images/mai-thaiC.svg'   className='interestImage'  alt='' />
         <h2 className= 'Nofilter'>Drink And Cocktail </h2>
         <p className= 'NofilterP'>I feel sad for those who don't drink.</p>
         
         </button>
       <button onClick={() => router.push('/Vendors')} disabled = {selected === '0' ? isDiabled : !isDiabled} className= {selected =='0' ? 'card filter grayscale' :'card filter grayscale-0 cardHover' } >
-        <img  src='./images/healthy-foodC.svg'  className='interestImage' alt='' />
+        <Image width={50} height={50}  src='./images/healthy-foodC.svg'  className='interestImage' alt='' />
         <h2  className= 'Nofilter'>Healthy Food</h2>
         <p className= 'NofilterP'>All sorrows are less with bread.</p>
         </button>
@@ -121,7 +121,7 @@ console.log(selected);
              
              <div  className='footerPDiv'>
                <p>Terms & Conditions . Privacy Policy</p>
-               <p>© Copyright 2023 NizamFoodZone is a registered trademark</p>
+               <p>© Copyright 2023 NizamFoodZImage width={50} height={50} is a registered trademark</p>
              </div>
        </footer>
     </div>
