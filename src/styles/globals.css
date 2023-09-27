@@ -444,7 +444,7 @@ body {
   flex-direction: column;
   flex-grow: 1;
   border: #dad6d8 1px solid;
-  padding: 2rem;
+  padding: 2rem 1rem;
   background: #fff;
   outline: none;
 }
