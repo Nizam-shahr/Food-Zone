@@ -25,7 +25,7 @@ function Cart() {
   return <div className="cartContainer">
      <Header  />
      <div className="cartHomeandVendors">
-     <h2 className="home" onClick={() => router.push('/')} >Home</h2>  <span> &gt; </span> <h2 >Cart</h2>      
+     <h2 className="home" onClick={() => router.push('/')} >Home</h2> <span> &gt; </span>  <h2 className="home" onClick={() => router.push('/Vendors')} >Vendors</h2>  <span> &gt; </span> <h2 >Cart</h2>      
        </div>
        {items.length !== 0 ? <h1 className="cartName">Cart</h1> : ''  }
       

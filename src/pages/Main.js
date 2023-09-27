@@ -63,19 +63,19 @@ console.log(selected);
          <h2 className= 'Nofilter' >Fast Food</h2>
          <p className='NofilterP'   >All sorrows are less with bread.</p>
         </button>
-        <button onClick={() => router.push('/Vendors')} disabled = {selected === '0' ? isDiabled : !isDiabled} className= {selected =='0' ? 'card filter grayscale' :'card filter grayscale-0' } >
+        <button onClick={() => router.push('/Vendors')} disabled = {selected === '0' ? isDiabled : !isDiabled} className= {selected =='0' ? 'card filter grayscale' :'card filter grayscale-0 cardHover' } >
         <img  src='./images/forkC.svg'  className='interestImage' alt='' />
         <h2 className='Nofilter' >Resturant</h2>
         <p className= 'NofilterP'>May not want it, but good for you.</p>
         </button>
        
-        <button onClick={() => router.push('/Vendors')} disabled = {selected === '0' ? isDiabled : !isDiabled} className= {selected =='0' ? 'card filter grayscale' :'card filter grayscale-0' } >
+        <button onClick={() => router.push('/Vendors')} disabled = {selected === '0' ? isDiabled : !isDiabled} className= {selected =='0' ? 'card filter grayscale ' :'card filter grayscale-0 cardHover' } >
         <img  src='./images/mai-thaiC.svg'   className='interestImage'  alt='' />
         <h2 className= 'Nofilter'>Drink And Cocktail </h2>
         <p className= 'NofilterP'>I feel sad for those who don't drink.</p>
         
         </button>
-      <button onClick={() => router.push('/Vendors')} disabled = {selected === '0' ? isDiabled : !isDiabled} className= {selected =='0' ? 'card filter grayscale' :'card filter grayscale-0' } >
+      <button onClick={() => router.push('/Vendors')} disabled = {selected === '0' ? isDiabled : !isDiabled} className= {selected =='0' ? 'card filter grayscale' :'card filter grayscale-0 cardHover' } >
         <img  src='./images/healthy-foodC.svg'  className='interestImage' alt='' />
         <h2  className= 'Nofilter'>Healthy Food</h2>
         <p className= 'NofilterP'>All sorrows are less with bread.</p>
@@ -89,6 +89,7 @@ console.log(selected);
        <section>
          <h2 className='headerTitle text-1.5'>How we serve you</h2>
          <div className="serveContainer">
+          <div className='serveContainerDiv'>
          <div className="serve">
            <Image src= './images/Fastfood_two.svg' width={250} height={100} />
              <h2 className='text-center'>Tell us where you are</h2>
@@ -105,6 +106,7 @@ console.log(selected);
          <p className='filterP'>Your order will be delivered to you in no time.</p>
          </div>
          </div>
+         </div>
        </section>
        <div className='borderLine'>
  
@@ -119,7 +121,7 @@ console.log(selected);
              
              <div  className='footerPDiv'>
                <p>Terms & Conditions . Privacy Policy</p>
-               <p>© Copyright 2021 FoodBag is a registered trademark</p>
+               <p>© Copyright 2023 NizamFoodZone is a registered trademark</p>
              </div>
        </footer>
     </div>

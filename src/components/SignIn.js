@@ -96,7 +96,7 @@ function SignIn({ setIsModalOpen, loggedIn, handleSignUp}) {
           >{text}</button>
         </form>
       </div>
-      <div className="create"> Don't have an account ?<button  onClick={handleSignUp} >
+      <div className="create"> <h2>Don't have an account ?</h2><button  onClick={handleSignUp} >
                  Create One
             </button></div>
                    

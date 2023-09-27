@@ -17,7 +17,7 @@ function Dishes({ dish: { price, name, id, image } }) {
   const { items } = useSelector((state) => state.cart);
   const product = items.find((item) => item.id === id);
   return (
-<div className="kfcCard">
+<div className="kfcCards">
       <div className="kfcCardItem ">
         <Image src={image} width={250} height={250} className="kfcImage" />
         <div className="kfcPrice">

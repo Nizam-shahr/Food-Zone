@@ -13,6 +13,7 @@ function Checkout() {
   const onSubmit = () => {
 
   };
+  
   return (
     <div>
       <Header />
@@ -55,7 +56,10 @@ function Checkout() {
          <h2 className="pb-4">Order</h2>
           <div className="cartProduct">
         
-           {items.map((item) => (
+           {
+          items.length === 0 ? <div className="flex flex-center "> <h2>Cart Is Empty</h2><img className="h-60"  src="https://media1.giphy.com/media/jv6Jvd8nESAeM6WUNN/giphy.gif?cid=6c09b9525pus5i3lzvhihx02kg8id834ghe7gebr9d2i1x84&ep=v1_stickers_related&rid=giphy.gif&ct=s"></img></div> 
+           :
+           items.map((item) => (
             <div >
             <OrderProduct
             id ={item.id}
