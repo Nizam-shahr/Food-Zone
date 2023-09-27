@@ -121,7 +121,7 @@ console.log(selected);
              
              <div  className='footerPDiv'>
                <p>Terms & Conditions . Privacy Policy</p>
-               <p>© Copyright 2023 NizamFoodZImage width={50} height={50} is a registered trademark</p>
+               <p>© Copyright 2023 NizamFoodZone is a registered trademark</p>
              </div>
        </footer>
     </div>

@@ -414,8 +414,8 @@ body {
   flex-wrap: wrap;
   flex-grow: 1;
   gap: 1rem;
-  padding: 1rem 0;
   margin: auto;
+  padding: 1rem 0;
   justify-content: center;
   flex-direction: row;
   width:90vw ;
@@ -696,12 +696,25 @@ select {
 
 }
 
-@media (min-width: 840px )  and (max-width: 1100px){
+@media (min-width: 840px )  and (max-width: 930px){
   .card{
-    max-width: 365px;
+    max-width: 375px;
   }
-
 } 
+
+@media (min-width: 930px )  and (max-width: 1300px){
+  .interest {
+    display: flex;
+    padding-left: 3rem;
+    justify-content: start;
+    margin: auto;
+    gap: 2rem;
+  }
+  .card {
+    width: 30vw;
+  }
+}
+
 @media (min-width: 960px )  and (max-width: 1300px) {
   .kfcCardItem {
     max-width: 320px;
