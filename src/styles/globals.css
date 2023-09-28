@@ -743,7 +743,7 @@ select {
   }
 } 
 
-@media (min-width: 930px )  and (max-width: 1300px){
+@media (min-width: 930px )  and (max-width: 1200px){
   .interest {
     display: flex;
     padding-left: 3rem;
