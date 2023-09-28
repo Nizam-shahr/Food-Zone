@@ -107,7 +107,7 @@ function Header() {
              <Modal isOpen={isLogoutOpen} onRequestClose={() => setIsLogoutOpen(false)} style={modalStyle}>
                 <div className="logout">
                   <h2  className="text-xl">Do you want to logout?</h2>
-                  <div><button className="registerButton" onClick={onLogOut} >Yes</button> <button className="registerButton" onClick={()=>setIsLogoutOpen(false) } >No</button></div>
+                  <div><button className="registerButton px-2" onClick={onLogOut} >Yes</button> <button className="registerButton px-2" onClick={()=>setIsLogoutOpen(false) } >No</button></div>
                 </div>
               </Modal>
             <Modal

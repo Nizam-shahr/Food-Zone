@@ -29,7 +29,7 @@ body {
     position: absolute;
     display: flex;
     left: 2rem;
-    bottom: 0.7rem;
+    bottom: 0.5rem;
     background-color: #dad6d8;
     color: #dad6d8;
     background: #AD4C4C;
@@ -376,7 +376,7 @@ body {
     position: absolute;
     display: flex;
     left: 3.1rem;
-    bottom: 0.7rem;
+    bottom: 1rem;
     background-color: #dad6d8;
     color: #dad6d8;
     background: #AD4C4C;
