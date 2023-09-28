@@ -70,6 +70,10 @@ function SignIn({ setIsModalOpen, loggedIn, handleSignUp}) {
 
   return (
     <div className='registerContainer'>
+      <div className="registerDetails ">
+        <h1 className="text-2xl font-bold">Welcome Back</h1>
+        <h2>Sign Up with email and password</h2>
+      </div>
       <div className="flex flex-col">
         <form onSubmit={onSubmit} className='register'>
 

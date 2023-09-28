@@ -10,10 +10,10 @@ import { db } from "../../firebase";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Spinner from "./Spinner";
 
-function Register({ setIsModalOpen, loggedIn, setIsOpen }) {
+function Register({ setIsModalOpen, loggedIn, setIsOpen, }) {
   const { data: session } = useSession();
-  const[text, setText] = useState('Register')
-  const [insteadText, setInsteadText] = useState('')
+  const [text, setText] = useState("Register");
+  const [insteadText, setInsteadText] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -49,27 +49,37 @@ function Register({ setIsModalOpen, loggedIn, setIsOpen }) {
       formDataCopy.timestamp = serverTimestamp();
 
       await setDoc(doc(db, "users", user.uid), formDataCopy);
-      setIsModalOpen(false)
+      setIsModalOpen(false);
     } catch (error) {
       if (error) {
-        setText('Register')
-        setInsteadText('Already have an account? Sign In')
+        setText("Register");
+        setInsteadText(() => {
+          return (
+            <div className="instead">
+              <h2>Already have an account?</h2>
+              <h2 className="black">Sign In</h2>
+            </div>
+          );
+        });
       }
-      toast.error("Something went wrong with registration or user already exist");
+      toast.error(
+        "Something went wrong with registration or user already exist"
+      );
     }
   };
   const handleText = () => {
     if (!loggedIn) {
       setText(() => {
-        return <Spinner/>
-      })
+        return <Spinner />;
+      });
     }
-    
-   
-  }
+  };
   return (
     <div className="registerContainer">
-      
+      <div className="registerDetails ">
+        <h1 className="text-2xl font-bold">Welcome Back</h1>
+        <h2>Sign Up with email and password</h2>
+      </div>
       <div className="flex flex-col">
         <form onSubmit={onSubmit} className="register">
           <label>Name</label>
@@ -99,12 +109,17 @@ function Register({ setIsModalOpen, loggedIn, setIsOpen }) {
             onChange={onChange}
           />
 
-          <button onClick={handleText} className="bg-blue-800 w-full p-3 registerButton">{text} </button>
+          <button
+            onClick={handleText}
+            className="bg-blue-800 w-full p-3 registerButton"
+          >
+            {text}{" "}
+          </button>
         </form>
       </div>
-      <div className="instead">
-        <button onClick={()=>  setIsOpen(false)}>{insteadText}</button>
-           </div>
+      <div>
+        <button onClick={() => setIsOpen(false)}> {insteadText}</button>
+      </div>
     </div>
   );
 }

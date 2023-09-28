@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import Modal from "react-modal";
 import Register from "./Register";
 import SignIn from "./SignIn";
+import Image from "next/image";
 function Header() {
   const router = useRouter();
   const { items } = useSelector((state) => state.cart);
@@ -13,6 +14,7 @@ function Header() {
   const auth = getAuth();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isLogoutOpen, setIsLogoutOpen] = useState(false)
   const [loggedIn, setLoggedIn] = useState(false);
   const modalStyle = {
     overlay: {
@@ -20,7 +22,7 @@ function Header() {
       zIndex: "100",
     },
     content: {
-      top: "50%",
+      top: "40%",
       left: "50%",
       right: "auto",
       bottom: "auto",
@@ -36,7 +38,7 @@ function Header() {
       zIndex: "100",
     },
     content: {
-      top: "50%",
+      top: "40%",
       left: "50%",
       right: "auto",
       bottom: "auto",
@@ -50,12 +52,10 @@ function Header() {
     setIsOpen(true);
   };
   const onLogOut = () => {
-    window.confirm('are u sure?')
     auth.signOut();
-    if (auth.signOut) {
-     router.push('/')
-    }
+    router.push('/')
     setLoggedIn(false);
+    setIsLogoutOpen(false)
   };
   const clickCart = () => {
     if (loggedIn) {
@@ -94,12 +94,22 @@ function Header() {
           <div>
             {" "}
             {loggedIn ? (
-              <button onClick={onLogOut}>Logout</button>
+              <div>
+              <button onClick={()=> setIsLogoutOpen(true)} className="logoutContainer">
+                <Image src='/images/user.png' width={30} height={30} />
+              </button>
+              </div>
             ) : (
               <button className="SignIn" onClick={() => setIsModalOpen(true)}>
                 Sign in
               </button>
             )}
+             <Modal isOpen={isLogoutOpen} onRequestClose={() => setIsLogoutOpen(false)} style={modalStyle}>
+                <div className="logout">
+                  <h2  className="text-xl">Do you want to logout?</h2>
+                  <div><button className="registerButton" onClick={onLogOut} >Yes</button> <button className="registerButton" onClick={()=>setIsLogoutOpen(false) } >No</button></div>
+                </div>
+              </Modal>
             <Modal
               isOpen={isModalOpen}
               onRequestClose={() => setIsModalOpen(false)}
@@ -107,6 +117,7 @@ function Header() {
             >
               <SignIn
                 setIsModalOpen={setIsModalOpen}
+                setIsLogoutOpen={setIsLogoutOpen}
                 isModalOpen={isModalOpen}
                 loggedIn={loggedIn}
                 handleSignUp={handleSignUp}
@@ -120,6 +131,7 @@ function Header() {
                 <Register
                   setIsOpen={setIsOpen}
                   setIsModalOpen={setIsModalOpen}
+                setIsLogoutOpen={setIsLogoutOpen}
                   loggedIn={loggedIn}
                 />
 

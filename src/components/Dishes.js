@@ -2,6 +2,7 @@ import { addToCart, removeFromCart } from "../slices/cartSlice";
 import Cart from "../pages/Cart";
 import { useDispatch, useSelector } from "react-redux"
 import { PiCurrencyNgnDuotone } from "react-icons/pi";
+import { MdRemoveCircle } from "react-icons/md";
 import Image from "next/image";
 function Dishes({ dish: { price, name, id, image } }) {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ function Dishes({ dish: { price, name, id, image } }) {
           <h2>{name}</h2>
           <h3><PiCurrencyNgnDuotone/>{price}</h3>
         </div>
-        {product ? <button onClick={removeItemFromBasket} >Remove </button> : <button onClick={addItemToBasket}>Add to cart </button> }
+        {product ? <button className="kfcCardButtonTwo" onClick={removeItemFromBasket} ><span><MdRemoveCircle size={30} /></span> Remove </button> : <button className="kfcCardButtonOne" onClick={addItemToBasket}>Add to cart </button> }
         
       </div>
     </div>
