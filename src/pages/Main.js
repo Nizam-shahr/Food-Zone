@@ -58,7 +58,7 @@ console.log(selected);
        <h2 className='interestTitle'> Pick an interest</h2>
        <div className='interest'>
         
-        <button onClick={()=>router.push('/Vendors')} disabled = {selected === '0' ? isDiabled : !isDiabled} className= {selected =='0' ? 'card filter grayscale' :'card filter grayscale-0' }>
+        <button onClick={()=>router.push('/Vendors')} disabled = {selected === '0' ? isDiabled : !isDiabled} className= {selected =='0' ? 'card filter grayscale' :'card filter grayscale-0 cardHover' }>
        <Image width={50} height={50} src='./images/fastFoodC.svg'  className='interestImage' alt='' />
          <h2 className= 'Nofilter' >Fast Food</h2>
          <p className='NofilterP'   >All sorrows are less with bread.</p>
@@ -91,17 +91,17 @@ console.log(selected);
          <div className="serveContainer">
           <div className='serveContainerDiv'>
          <div className="serve">
-           <Image src= './images/Fastfood_two.svg' width={250} height={100} />
+           <Image src= './images/Fastfood_two.svg' width={300} height={100} />
              <h2 className='text-center'>Tell us where you are</h2>
              <p className='filterP'>Select the location you want us to deliver.</p>
          </div>
          <div className="serve">
-         <Image src= './images/Map_Two.svg'width={250} height={100}  />
+         <Image src= './images/Map_Two.svg'width={300} height={100}  />
        <h2 className='text-center'>Tell us what you want</h2>
  <p className='filterP'>Browse the type of food that interest you.</p>
          </div>
          <div className="serve">
-         <Image src= './images/Scooter_Two.svg' width={250} height={100} />
+         <Image src= './images/Scooter_Two.svg' width={300} height={100} />
          <h2 className='text-center'>We’ll come running.</h2>
          <p className='filterP'>Your order will be delivered to you in no time.</p>
          </div>
